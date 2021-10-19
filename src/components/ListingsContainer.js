@@ -29,7 +29,6 @@ function ListingsContainer( {search} ) {
           <ListingCard key={item.id}
           item={item}
           onDeleteItem={handleDeleteItem}
-          
           />
         ))}
       </ul>

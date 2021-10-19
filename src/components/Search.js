@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 
-function Search( {search}) {
+function Search( {onSearch}) {
   const [currentSearch, setCurrentSearch] = useState("")
+  
   function handleSubmit(e) {
     e.preventDefault();
-   
+    onSearch(currentSearch)
   }
 
   return (
@@ -13,7 +14,7 @@ function Search( {search}) {
         type="text"
         id="search"
         placeholder="search free stuff"
-        value={search}
+        value={currentSearch}
         onChange={(e) => setCurrentSearch(e.target.value)}
       />
       <button type="submit">🔍</button>
